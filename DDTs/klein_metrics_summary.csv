@@ -1,0 +1,2 @@
+name,input_size,output_size,uniformity,max_ddt,fixed_points,non_linearity,avg_sac,max_std_sac,sac_per_input,std_sac_per_input,spectral_gap,tv_distance_r4,max_probability_r4,mixing_time_eps_1e-3,mixing_time_spectral_eps_1e-3
+KLEIN,4,4,4,16,0,4.0,0.59375,0.10825317547305482,"[0.5625, 0.6875, 0.5625, 0.5625]","[0.108253, 0.108253, 0.108253, 0.108253]",0.5453166331548571,0.03774414062500001,0.087890625,9,12.0

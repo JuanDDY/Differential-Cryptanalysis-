@@ -1,0 +1,2 @@
+name,input_size,output_size,uniformity,max_ddt,fixed_points,non_linearity,avg_sac,max_std_sac,sac_per_input,std_sac_per_input,spectral_gap,tv_distance_r4,max_probability_r4,mixing_time_eps_1e-3,mixing_time_spectral_eps_1e-3
+AES,8,8,4,256,0,112.0,0.5048828125,0.036643873123620545,"[0.492188, 0.498047, 0.511719, 0.507812, 0.5, 0.503906, 0.507812, 0.517578]","[0.036644, 0.032624, 0.025615, 0.03125, 0.03125, 0.032915, 0.027063, 0.024]",0.9358791572031624,0.00010937323757245071,0.0039264485239982605,4,7.0
