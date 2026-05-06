@@ -1,0 +1,9 @@
+numpy
+pandas
+matplotlib
+seaborn
+tabulate
+altair
+plotnine
+ipython
+galois
