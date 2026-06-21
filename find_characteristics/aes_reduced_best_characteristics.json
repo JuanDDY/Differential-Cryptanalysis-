@@ -1,0 +1,131 @@
+{
+  "search_parameters": {
+    "cipher": "aes",
+    "total_rounds": 4,
+    "search_until_round": 3,
+    "block_bits": 64,
+    "key_bits": 64,
+    "search_best": true,
+    "delta_in": null,
+    "target_out": null,
+    "top_k": 10,
+    "beam_width": 120,
+    "max_outputs_per_active_chunk": 4,
+    "max_candidates_per_state": 128,
+    "min_step_prob": 0.0,
+    "max_initial_active_chunks": 1,
+    "max_initial_deltas": 24
+  },
+  "characteristics": [
+    {
+      "rank": 1,
+      "deltas": [
+        "0x1800000000000000",
+        "0x87CECE4900000000",
+        "0x0057BF747B930058",
+        "0xB8D172C63DC37207"
+      ],
+      "probability": 1.3552527156068805e-20,
+      "weight": 66.0
+    },
+    {
+      "rank": 2,
+      "deltas": [
+        "0x0200000000000000",
+        "0x0603030500000000",
+        "0x00243C0C20380008",
+        "0x77189A4AD1E33D13"
+      ],
+      "probability": 6.776263578034403e-21,
+      "weight": 67.0
+    },
+    {
+      "rank": 3,
+      "deltas": [
+        "0x0400000000000000",
+        "0x2412123600000000",
+        "0x00B01A5583290066",
+        "0xC09FAFA70D03B12B"
+      ],
+      "probability": 6.776263578034403e-21,
+      "weight": 67.0
+    },
+    {
+      "rank": 4,
+      "deltas": [
+        "0x0800000000000000",
+        "0x0603030500000000",
+        "0x00243C0C20380008",
+        "0x77189A4AD1E33D13"
+      ],
+      "probability": 6.776263578034403e-21,
+      "weight": 67.0
+    },
+    {
+      "rank": 5,
+      "deltas": [
+        "0x0900000000000000",
+        "0x0603030500000000",
+        "0x00243C0C20380008",
+        "0x77189A4AD1E33D13"
+      ],
+      "probability": 6.776263578034403e-21,
+      "weight": 67.0
+    },
+    {
+      "rank": 6,
+      "deltas": [
+        "0x0A00000000000000",
+        "0x0603030500000000",
+        "0x00243C0C20380008",
+        "0x77189A4AD1E33D13"
+      ],
+      "probability": 6.776263578034403e-21,
+      "weight": 67.0
+    },
+    {
+      "rank": 7,
+      "deltas": [
+        "0x0C00000000000000",
+        "0x0603030500000000",
+        "0x00243C0C20380008",
+        "0x77189A4AD1E33D13"
+      ],
+      "probability": 6.776263578034403e-21,
+      "weight": 67.0
+    },
+    {
+      "rank": 8,
+      "deltas": [
+        "0x0E00000000000000",
+        "0x0603030500000000",
+        "0x00243C0C20380008",
+        "0x77189A4AD1E33D13"
+      ],
+      "probability": 6.776263578034403e-21,
+      "weight": 67.0
+    },
+    {
+      "rank": 9,
+      "deltas": [
+        "0x0F00000000000000",
+        "0x0603030500000000",
+        "0x00243C0C20380008",
+        "0x77189A4AD1E33D13"
+      ],
+      "probability": 6.776263578034403e-21,
+      "weight": 67.0
+    },
+    {
+      "rank": 10,
+      "deltas": [
+        "0x1000000000000000",
+        "0x0603030500000000",
+        "0x00243C0C20380008",
+        "0x77189A4AD1E33D13"
+      ],
+      "probability": 6.776263578034403e-21,
+      "weight": 67.0
+    }
+  ]
+}

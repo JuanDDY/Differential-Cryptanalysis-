@@ -115,3 +115,39 @@ python find_characteristics\reduced_characteristic_search.py `
 - `--max-outputs-per-active-chunk`: limita salidas por S-box activa; en AES el chunk es un byte, en KLEIN es un nibble.
 - `--max-candidates-per-state`: limita cuantos candidatos intermedios se conservan por estado y ronda.
 - `--max-initial-active-chunks`: al usar `--search-best`, limita cuantos chunks activos puede tener el `Delta_in` propuesto.
+
+---
+
+## Caracteristicas para AES-128 y KLEIN-64 estandar
+
+El script `standard_characteristic_search.py` calcula, valida y guarda dos
+caracteristicas con probabilidad estrictamente mayor que `2^-64`:
+
+- AES-128: 3 rondas, peso `54`, probabilidad `2^-54`.
+- KLEIN-64: 6 rondas, peso `62`, probabilidad `2^-62`.
+
+AES siempre tiene bloques de 128 bits. El nombre AES-128 indica que la clave
+tambien tiene 128 bits. AES-192 y AES-256 cambian el tamano de clave, pero no
+el bloque.
+
+Generar nuevamente los JSON:
+
+```powershell
+python find_characteristics\standard_characteristic_search.py
+```
+
+Archivos generados:
+
+- `aes_128_3round_characteristic.json`
+- `klein_64_6round_characteristic.json`
+
+Cada JSON contiene las diferencias de entrada y salida por ronda, las
+transiciones activas de la S-box, los conteos de la DDT, la probabilidad y el
+peso diferencial.
+
+Para repetir tambien el beam search de KLEIN, en lugar de reutilizar el
+candidato ya encontrado y validado:
+
+```powershell
+python find_characteristics\standard_characteristic_search.py --refresh-klein-search
+```

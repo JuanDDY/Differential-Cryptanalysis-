@@ -1,7 +1,14 @@
 from typing import List
 
 # --- AES-128 fijo (no modular) -----------------------------------------------
+#
+# AES siempre usa bloques de 128 bits. En este modulo, ademas, la clave tambien
+# es de 128 bits (AES-128). AES-192 y AES-256 mantienen el bloque de 128 bits y
+# solo cambian el tamano de la clave y el numero de rondas.
 
+BLOCK_BITS = 128
+BLOCK_BYTES = 16
+KEY_BITS = 128
 NB = 4  # columnas del estado
 NK = 4  # palabras de la clave de 128 bits
 NR = 10  # rondas AES-128
@@ -76,12 +83,12 @@ def _mul(a: int, b: int) -> int:
 
 
 def _sub_bytes(state: List[int]) -> None:
-    for i in range(16):
+    for i in range(BLOCK_BYTES):
         state[i] = S_BOX[state[i]]
 
 
 def _inv_sub_bytes(state: List[int]) -> None:
-    for i in range(16):
+    for i in range(BLOCK_BYTES):
         state[i] = INV_S_BOX[state[i]]
 
 
@@ -124,12 +131,12 @@ def _inv_mix_columns(state: List[int]) -> None:
 
 
 def _add_round_key(state: List[int], round_key: List[int]) -> None:
-    for i in range(16):
+    for i in range(BLOCK_BYTES):
         state[i] ^= round_key[i]
 
 
 def _int_to_state(x: int) -> List[int]:
-    return list((x & ((1 << 128) - 1)).to_bytes(16, "big"))
+    return list((x & ((1 << BLOCK_BITS) - 1)).to_bytes(BLOCK_BYTES, "big"))
 
 
 def _state_to_int(state: List[int]) -> int:

@@ -1,0 +1,311 @@
+{
+  "cipher": "KLEIN-64",
+  "block_bits": 64,
+  "key_bits": 64,
+  "full_cipher_rounds": 12,
+  "characteristic_rounds": 6,
+  "threshold": {
+    "condition": "probability > 2^-64",
+    "probability": 5.421010862427522e-20,
+    "maximum_weight_exclusive": 64.0
+  },
+  "passes_threshold": true,
+  "initial_difference": "0x1000000000000000",
+  "final_difference": "0xFB60405BDBAB9070",
+  "probability": 2.168404344971009e-19,
+  "probability_power_of_two": "2^-62",
+  "weight": 62.0,
+  "active_sboxes_total": 27,
+  "search_method": "Beam search over exact KLEIN S-box DDT transitions, followed by exact round-by-round verification.",
+  "optimality_note": "High-probability candidate found by beam search; this is not a proof of global optimality over every possible KLEIN trail.",
+  "rounds": [
+    {
+      "round": 1,
+      "input_difference": "0x1000000000000000",
+      "sbox_output_difference": "0x3000000000000000",
+      "output_difference": "0x0000000030506030",
+      "linear_layer": "RotateNibbles + MixNibbles",
+      "active_sboxes": 1,
+      "probability": 0.25,
+      "weight": 2.0,
+      "active_transitions": [
+        {
+          "position": 0,
+          "delta_in": "0x1",
+          "delta_out": "0x3",
+          "ddt_count": 4,
+          "probability": 0.25,
+          "weight": 2.0
+        }
+      ]
+    },
+    {
+      "round": 2,
+      "input_difference": "0x0000000030506030",
+      "sbox_output_difference": "0x0000000040201010",
+      "output_difference": "0x60E0E00010300020",
+      "linear_layer": "RotateNibbles + MixNibbles",
+      "active_sboxes": 4,
+      "probability": 0.0009765625,
+      "weight": 10.0,
+      "active_transitions": [
+        {
+          "position": 8,
+          "delta_in": "0x3",
+          "delta_out": "0x4",
+          "ddt_count": 2,
+          "probability": 0.125,
+          "weight": 3.0
+        },
+        {
+          "position": 10,
+          "delta_in": "0x5",
+          "delta_out": "0x2",
+          "ddt_count": 4,
+          "probability": 0.25,
+          "weight": 2.0
+        },
+        {
+          "position": 12,
+          "delta_in": "0x6",
+          "delta_out": "0x1",
+          "ddt_count": 2,
+          "probability": 0.125,
+          "weight": 3.0
+        },
+        {
+          "position": 14,
+          "delta_in": "0x3",
+          "delta_out": "0x1",
+          "ddt_count": 4,
+          "probability": 0.25,
+          "weight": 2.0
+        }
+      ]
+    },
+    {
+      "round": 3,
+      "input_difference": "0x60E0E00010300020",
+      "sbox_output_difference": "0x6070300030300050",
+      "output_difference": "0x60500000E07000D0",
+      "linear_layer": "RotateNibbles + MixNibbles",
+      "active_sboxes": 6,
+      "probability": 0.0001220703125,
+      "weight": 13.0,
+      "active_transitions": [
+        {
+          "position": 0,
+          "delta_in": "0x6",
+          "delta_out": "0x6",
+          "ddt_count": 4,
+          "probability": 0.25,
+          "weight": 2.0
+        },
+        {
+          "position": 2,
+          "delta_in": "0xE",
+          "delta_out": "0x7",
+          "ddt_count": 4,
+          "probability": 0.25,
+          "weight": 2.0
+        },
+        {
+          "position": 4,
+          "delta_in": "0xE",
+          "delta_out": "0x3",
+          "ddt_count": 4,
+          "probability": 0.25,
+          "weight": 2.0
+        },
+        {
+          "position": 8,
+          "delta_in": "0x1",
+          "delta_out": "0x3",
+          "ddt_count": 4,
+          "probability": 0.25,
+          "weight": 2.0
+        },
+        {
+          "position": 10,
+          "delta_in": "0x3",
+          "delta_out": "0x3",
+          "ddt_count": 2,
+          "probability": 0.125,
+          "weight": 3.0
+        },
+        {
+          "position": 14,
+          "delta_in": "0x2",
+          "delta_out": "0x5",
+          "ddt_count": 4,
+          "probability": 0.25,
+          "weight": 2.0
+        }
+      ]
+    },
+    {
+      "round": 4,
+      "input_difference": "0x60500000E07000D0",
+      "sbox_output_difference": "0x6020000070700020",
+      "output_difference": "0x00E0709020C08000",
+      "linear_layer": "RotateNibbles + MixNibbles",
+      "active_sboxes": 5,
+      "probability": 0.00048828125,
+      "weight": 11.0,
+      "active_transitions": [
+        {
+          "position": 0,
+          "delta_in": "0x6",
+          "delta_out": "0x6",
+          "ddt_count": 4,
+          "probability": 0.25,
+          "weight": 2.0
+        },
+        {
+          "position": 2,
+          "delta_in": "0x5",
+          "delta_out": "0x2",
+          "ddt_count": 4,
+          "probability": 0.25,
+          "weight": 2.0
+        },
+        {
+          "position": 8,
+          "delta_in": "0xE",
+          "delta_out": "0x7",
+          "ddt_count": 4,
+          "probability": 0.25,
+          "weight": 2.0
+        },
+        {
+          "position": 10,
+          "delta_in": "0x7",
+          "delta_out": "0x7",
+          "ddt_count": 2,
+          "probability": 0.125,
+          "weight": 3.0
+        },
+        {
+          "position": 14,
+          "delta_in": "0xD",
+          "delta_out": "0x2",
+          "ddt_count": 4,
+          "probability": 0.25,
+          "weight": 2.0
+        }
+      ]
+    },
+    {
+      "round": 5,
+      "input_difference": "0x00E0709020C08000",
+      "sbox_output_difference": "0x0070E080D0907000",
+      "output_difference": "0x000070509000E070",
+      "linear_layer": "RotateNibbles + MixNibbles",
+      "active_sboxes": 6,
+      "probability": 3.0517578125e-05,
+      "weight": 15.0,
+      "active_transitions": [
+        {
+          "position": 2,
+          "delta_in": "0xE",
+          "delta_out": "0x7",
+          "ddt_count": 4,
+          "probability": 0.25,
+          "weight": 2.0
+        },
+        {
+          "position": 4,
+          "delta_in": "0x7",
+          "delta_out": "0xE",
+          "ddt_count": 4,
+          "probability": 0.25,
+          "weight": 2.0
+        },
+        {
+          "position": 6,
+          "delta_in": "0x9",
+          "delta_out": "0x8",
+          "ddt_count": 2,
+          "probability": 0.125,
+          "weight": 3.0
+        },
+        {
+          "position": 8,
+          "delta_in": "0x2",
+          "delta_out": "0xD",
+          "ddt_count": 4,
+          "probability": 0.25,
+          "weight": 2.0
+        },
+        {
+          "position": 10,
+          "delta_in": "0xC",
+          "delta_out": "0x9",
+          "ddt_count": 2,
+          "probability": 0.125,
+          "weight": 3.0
+        },
+        {
+          "position": 12,
+          "delta_in": "0x8",
+          "delta_out": "0x7",
+          "ddt_count": 2,
+          "probability": 0.125,
+          "weight": 3.0
+        }
+      ]
+    },
+    {
+      "round": 6,
+      "input_difference": "0x000070509000E070",
+      "sbox_output_difference": "0x0000E020400070E0",
+      "output_difference": "0xFB60405BDBAB9070",
+      "linear_layer": "RotateNibbles + MixNibbles",
+      "active_sboxes": 5,
+      "probability": 0.00048828125,
+      "weight": 11.0,
+      "active_transitions": [
+        {
+          "position": 4,
+          "delta_in": "0x7",
+          "delta_out": "0xE",
+          "ddt_count": 4,
+          "probability": 0.25,
+          "weight": 2.0
+        },
+        {
+          "position": 6,
+          "delta_in": "0x5",
+          "delta_out": "0x2",
+          "ddt_count": 4,
+          "probability": 0.25,
+          "weight": 2.0
+        },
+        {
+          "position": 8,
+          "delta_in": "0x9",
+          "delta_out": "0x4",
+          "ddt_count": 2,
+          "probability": 0.125,
+          "weight": 3.0
+        },
+        {
+          "position": 12,
+          "delta_in": "0xE",
+          "delta_out": "0x7",
+          "ddt_count": 4,
+          "probability": 0.25,
+          "weight": 2.0
+        },
+        {
+          "position": 14,
+          "delta_in": "0x7",
+          "delta_out": "0xE",
+          "ddt_count": 4,
+          "probability": 0.25,
+          "weight": 2.0
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,131 @@
+{
+  "cipher": "AES-128",
+  "block_bits": 128,
+  "key_bits": 128,
+  "full_cipher_rounds": 10,
+  "characteristic_rounds": 3,
+  "threshold": {
+    "condition": "probability > 2^-64",
+    "probability": 5.421010862427522e-20,
+    "maximum_weight_exclusive": 64.0
+  },
+  "passes_threshold": true,
+  "initial_difference": "0xB30000000058000000004500000000F7",
+  "final_difference": "0xD10000000000009E0000A30000A30000",
+  "probability": 5.551115123125783e-17,
+  "probability_power_of_two": "2^-54",
+  "weight": 54.0,
+  "active_sboxes_total": 9,
+  "search_method": "Exhaustive search inside the 3-round 4->1->4 active-S-box construction, using exact AES S-box DDT probabilities.",
+  "optimality_note": "Best characteristic found in this structured family; this is not a proof of global optimality over every possible AES trail.",
+  "rounds": [
+    {
+      "round": 1,
+      "input_difference": "0xB30000000058000000004500000000F7",
+      "sbox_output_difference": "0x0E0000000009000000000D000000000B",
+      "output_difference": "0x01000000000000000000000000000000",
+      "linear_layer": "ShiftRows + MixColumns",
+      "active_sboxes": 4,
+      "probability": 5.960464477539063e-08,
+      "weight": 24.0,
+      "active_transitions": [
+        {
+          "position": 0,
+          "delta_in": "0xB3",
+          "delta_out": "0x0E",
+          "ddt_count": 4,
+          "probability": 0.015625,
+          "weight": 6.0
+        },
+        {
+          "position": 5,
+          "delta_in": "0x58",
+          "delta_out": "0x09",
+          "ddt_count": 4,
+          "probability": 0.015625,
+          "weight": 6.0
+        },
+        {
+          "position": 10,
+          "delta_in": "0x45",
+          "delta_out": "0x0D",
+          "ddt_count": 4,
+          "probability": 0.015625,
+          "weight": 6.0
+        },
+        {
+          "position": 15,
+          "delta_in": "0xF7",
+          "delta_out": "0x0B",
+          "ddt_count": 4,
+          "probability": 0.015625,
+          "weight": 6.0
+        }
+      ]
+    },
+    {
+      "round": 2,
+      "input_difference": "0x01000000000000000000000000000000",
+      "sbox_output_difference": "0x1F000000000000000000000000000000",
+      "output_difference": "0x3E1F1F21000000000000000000000000",
+      "linear_layer": "ShiftRows + MixColumns",
+      "active_sboxes": 1,
+      "probability": 0.015625,
+      "weight": 6.0,
+      "active_transitions": [
+        {
+          "position": 0,
+          "delta_in": "0x01",
+          "delta_out": "0x1F",
+          "ddt_count": 4,
+          "probability": 0.015625,
+          "weight": 6.0
+        }
+      ]
+    },
+    {
+      "round": 3,
+      "input_difference": "0x3E1F1F21000000000000000000000000",
+      "sbox_output_difference": "0xD1A3A39E000000000000000000000000",
+      "output_difference": "0xD10000000000009E0000A30000A30000",
+      "linear_layer": "ShiftRows (final AES round, no MixColumns)",
+      "active_sboxes": 4,
+      "probability": 5.960464477539063e-08,
+      "weight": 24.0,
+      "active_transitions": [
+        {
+          "position": 0,
+          "delta_in": "0x3E",
+          "delta_out": "0xD1",
+          "ddt_count": 4,
+          "probability": 0.015625,
+          "weight": 6.0
+        },
+        {
+          "position": 1,
+          "delta_in": "0x1F",
+          "delta_out": "0xA3",
+          "ddt_count": 4,
+          "probability": 0.015625,
+          "weight": 6.0
+        },
+        {
+          "position": 2,
+          "delta_in": "0x1F",
+          "delta_out": "0xA3",
+          "ddt_count": 4,
+          "probability": 0.015625,
+          "weight": 6.0
+        },
+        {
+          "position": 3,
+          "delta_in": "0x21",
+          "delta_out": "0x9E",
+          "ddt_count": 4,
+          "probability": 0.015625,
+          "weight": 6.0
+        }
+      ]
+    }
+  ]
+}

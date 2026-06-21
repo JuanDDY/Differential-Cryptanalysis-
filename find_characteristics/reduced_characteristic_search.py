@@ -2,11 +2,13 @@ from __future__ import annotations
 
 import argparse
 import heapq
+import json
 import math
 import os
 import sys
 from dataclasses import dataclass
 from itertools import combinations, product
+from pathlib import Path
 from typing import Callable, Dict, Iterable, List, Sequence, Tuple
 
 
@@ -386,6 +388,32 @@ def print_characteristics(items: Iterable[Characteristic], block_bits: int) -> N
         print(f"{i:2d}. {path}  P = {c.probability:.12e}  w = {c.weight:.4f}")
 
 
+def save_characteristics_json(
+    items: Sequence[Characteristic],
+    *,
+    output_path: str,
+    block_bits: int,
+    search_parameters: Dict[str, object],
+) -> Path:
+    path = Path(output_path)
+    path.parent.mkdir(parents=True, exist_ok=True)
+
+    payload = {
+        "search_parameters": search_parameters,
+        "characteristics": [
+            {
+                "rank": rank,
+                "deltas": [_fmt_block(delta, block_bits) for delta in item.deltas],
+                "probability": item.probability,
+                "weight": item.weight,
+            }
+            for rank, item in enumerate(items, start=1)
+        ],
+    }
+    path.write_text(json.dumps(payload, indent=2), encoding="utf-8")
+    return path
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(
         description=(
@@ -436,6 +464,12 @@ def main() -> None:
         default=128,
         help="Cantidad maxima de Delta_in candidatos al usar --search-best",
     )
+    parser.add_argument(
+        "--output-json",
+        type=str,
+        default=None,
+        help="Ruta opcional para guardar parametros y caracteristicas en JSON",
+    )
     args = parser.parse_args()
 
     target_out = _parse_hex_block(args.target_out, args.block_bits) if args.target_out else None
@@ -478,6 +512,31 @@ def main() -> None:
         f"busqueda_hasta={args.rounds - 1} (penultima)"
     )
     print_characteristics(chars, args.block_bits)
+
+    if args.output_json:
+        output_path = save_characteristics_json(
+            chars,
+            output_path=args.output_json,
+            block_bits=args.block_bits,
+            search_parameters={
+                "cipher": args.cipher,
+                "total_rounds": args.rounds,
+                "search_until_round": args.rounds - 1,
+                "block_bits": args.block_bits,
+                "key_bits": args.key_bits,
+                "search_best": args.search_best,
+                "delta_in": args.delta_in,
+                "target_out": args.target_out,
+                "top_k": args.top_k,
+                "beam_width": args.beam_width,
+                "max_outputs_per_active_chunk": args.max_outputs_per_active_chunk,
+                "max_candidates_per_state": args.max_candidates_per_state,
+                "min_step_prob": args.min_step_prob,
+                "max_initial_active_chunks": args.max_initial_active_chunks,
+                "max_initial_deltas": args.max_initial_deltas,
+            },
+        )
+        print(f"Resultados guardados en: {output_path}")
 
 
 if __name__ == "__main__":

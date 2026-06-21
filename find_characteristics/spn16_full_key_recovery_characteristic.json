@@ -1,0 +1,31 @@
+{
+  "search_parameters": {
+    "cipher": "spn16",
+    "total_rounds": 4,
+    "search_until_round": 3,
+    "search_best": true,
+    "top_k": 30,
+    "beam_width": 500,
+    "max_outputs_per_active_nibble": 8,
+    "max_initial_active_nibbles": 2,
+    "max_initial_deltas": 80
+  },
+  "selection_criterion": "Highest-probability characteristic found with all four nibbles active at the input of the last S-box layer.",
+  "characteristic": {
+    "deltas": [
+      "0x0F00",
+      "0x0400",
+      "0x0440",
+      "0x4264"
+    ],
+    "probability": 0.01318359375,
+    "probability_fraction": "27/2048",
+    "weight": 6.245112497836532,
+    "active_final_nibbles": [
+      0,
+      1,
+      2,
+      3
+    ]
+  }
+}

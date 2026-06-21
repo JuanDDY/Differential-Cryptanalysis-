@@ -1,0 +1,151 @@
+{
+  "search_parameters": {
+    "cipher": "klein",
+    "total_rounds": 6,
+    "search_until_round": 5,
+    "block_bits": 32,
+    "key_bits": 64,
+    "search_best": true,
+    "delta_in": null,
+    "target_out": null,
+    "top_k": 10,
+    "beam_width": 120,
+    "max_outputs_per_active_chunk": 4,
+    "max_candidates_per_state": 128,
+    "min_step_prob": 0.0,
+    "max_initial_active_chunks": 1,
+    "max_initial_deltas": 24
+  },
+  "characteristics": [
+    {
+      "rank": 1,
+      "deltas": [
+        "0x10000000",
+        "0x30305060",
+        "0x00500040",
+        "0x2080E000",
+        "0x00D0E070",
+        "0xF07BCBB0"
+      ],
+      "probability": 9.313225746154785e-10,
+      "weight": 30.0
+    },
+    {
+      "rank": 2,
+      "deltas": [
+        "0x10000000",
+        "0x30305060",
+        "0x00500040",
+        "0x2080E000",
+        "0x00D0E070",
+        "0x30FB8BF0"
+      ],
+      "probability": 9.313225746154785e-10,
+      "weight": 30.0
+    },
+    {
+      "rank": 3,
+      "deltas": [
+        "0x10000000",
+        "0x30305060",
+        "0xA000B020",
+        "0xF00000A0",
+        "0x10700070",
+        "0x0BEB6BBB"
+      ],
+      "probability": 9.313225746154785e-10,
+      "weight": 30.0
+    },
+    {
+      "rank": 4,
+      "deltas": [
+        "0x10000000",
+        "0x30305060",
+        "0xA000B020",
+        "0xF00000A0",
+        "0x30707000",
+        "0xF02B30FB"
+      ],
+      "probability": 9.313225746154785e-10,
+      "weight": 30.0
+    },
+    {
+      "rank": 5,
+      "deltas": [
+        "0x10000000",
+        "0x30305060",
+        "0xA000B020",
+        "0xF00000A0",
+        "0x30707000",
+        "0x00DB3B00"
+      ],
+      "probability": 9.313225746154785e-10,
+      "weight": 30.0
+    },
+    {
+      "rank": 6,
+      "deltas": [
+        "0x50000000",
+        "0x20206040",
+        "0x30600050",
+        "0xA040E000",
+        "0x00605000",
+        "0x0B1BD010"
+      ],
+      "probability": 9.313225746154785e-10,
+      "weight": 30.0
+    },
+    {
+      "rank": 7,
+      "deltas": [
+        "0x50000000",
+        "0x20206040",
+        "0x30600050",
+        "0xA040E000",
+        "0x00605000",
+        "0xA0204080"
+      ],
+      "probability": 9.313225746154785e-10,
+      "weight": 30.0
+    },
+    {
+      "rank": 8,
+      "deltas": [
+        "0xD0000000",
+        "0x20206040",
+        "0x30600050",
+        "0xA040E000",
+        "0x00605000",
+        "0x0B1BD010"
+      ],
+      "probability": 9.313225746154785e-10,
+      "weight": 30.0
+    },
+    {
+      "rank": 9,
+      "deltas": [
+        "0xD0000000",
+        "0x20206040",
+        "0x30600050",
+        "0xA040E000",
+        "0x00605000",
+        "0xA0204080"
+      ],
+      "probability": 9.313225746154785e-10,
+      "weight": 30.0
+    },
+    {
+      "rank": 10,
+      "deltas": [
+        "0xE0000000",
+        "0x30305060",
+        "0xA000B020",
+        "0xF00000A0",
+        "0x30707000",
+        "0x00DB3B00"
+      ],
+      "probability": 9.313225746154785e-10,
+      "weight": 30.0
+    }
+  ]
+}
